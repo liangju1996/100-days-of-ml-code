@@ -1,7 +1,7 @@
 # 100-days-of-ml-code
 #Day 1: Data Prepocessing
 # 数据预处理
-'''
+```
 #Step 1: Importing the libraries
 #导入库
 import numpy as np
@@ -86,4 +86,4 @@ print("X_train")
 print(X_train)
 print("X_test")
 print(X_test)
-'''
+```
