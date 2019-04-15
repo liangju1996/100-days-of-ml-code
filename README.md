@@ -4,7 +4,8 @@
 ```python 
   import numpy as np
   '''
-  NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与 SciPy（Scientific Python）和 Matplotlib（绘图库）一起使用.
+  NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库.
+  Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与 SciPy（Scientific Python）和 Matplotlib（绘图库）一起使用.
   '''
   import pandas as pd
   ''' pandas 是基于NumPy 的一种工具，该工具是为了解决数据分析任务而创建的。Pandas 纳入了大量库和一些标准的数据模型，提供了高效地操作大型数据集所需的工具。pandas提供了大量能使我们快速便捷地处理数据的函数和方法。你很快就会发现，它是使Python成为强大而高效的数据分析环境的重要因素之一。
