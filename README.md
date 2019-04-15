@@ -34,7 +34,7 @@
   print(Y)
 ```
 ## Step 3: Handling the missing data(处理缺失数据)
-```ruby
+```python
 from sklearn.preprocessing import Imputer
 imputer = sklearn.preprocessing.Imputer(missing_values ="NaN", strategy ="mean", axis = 0)
 """
@@ -66,7 +66,7 @@ print("X")
 print(X)
 ```
 ## Step 4: Encoding categorical data(解析分类数据)
-```
+```python
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder_X = LabelEncoder()
 # LabelEncoder可以将标签分配一个0—n_classes-1之间的编码 将各种标签分配一个可数的连续编号：
@@ -87,7 +87,7 @@ print("Y")
 print(Y)
 ```
 ## Step 5: Splitting the datasets into training sets and Test sets(拆分数据集为训练集合和测试集合)
-```
+```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split( X , Y , test_size = 0.2, random_state = 0)
 """ train_test_split函数用于将矩阵随机划分为训练子集和测试子集，并返回划分好的训练集测试集样本和训练集测试集标签。
@@ -115,7 +115,7 @@ print("Y_test")
 print(Y_test)
 ```
 ## Step 6: Feature Scaling(特征量化)
-```
+```python
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 # 数据在前处理的时候，经常会涉及到数据标准化。将现有的数据通过某种关系，映射到某一空间内。常用的标准化方式是,减去平均值，然后通过标准差映射到均至为0的空间内。系统会记录每个输入参数的平均数和标准差，以便数据可以还原。
