@@ -1,7 +1,7 @@
 # Day 1: Data Prepocessing(数据预处理)
 
 ## Step 1: Importing the libraries(导入库)
-```python ruby
+```python 
   import numpy as np
   """ NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与 SciPy（Scientific Python）和 Matplotlib（绘图库）一起使用.
   """
@@ -10,7 +10,7 @@
   """
 ```
 ## Step 2: Importing dataset(导入数据集)
-```ruby
+```python
   import sklearn
   """Scikit-learn(sklearn)是机器学习中常用的第三方模块，对常用的机器学习方法进行了封装，包括回归(Regression)、降维(Dimensionality Reduction)、分类(Classfication)、聚类(Clustering)等方法。
   """
