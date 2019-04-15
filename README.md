@@ -1,7 +1,7 @@
 # Day 1: Data Prepocessing(数据预处理)
 
 ## Step 1: Importing the libraries(导入库)
-```python
+```python ruby
   import numpy as np
   """ NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与 SciPy（Scientific Python）和 Matplotlib（绘图库）一起使用.
   """
