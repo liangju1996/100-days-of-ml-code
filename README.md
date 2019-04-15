@@ -2,38 +2,41 @@
 
 ## Step 1: Importing the libraries(导入库)
 ```python 
-  import numpy as np
-  '''
-  NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库.
-  Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与 SciPy（Scientific Python）和 Matplotlib（绘图库）一起使用.
-  '''
-  import pandas as pd
-  ''' pandas 是基于NumPy 的一种工具，该工具是为了解决数据分析任务而创建的。Pandas 纳入了大量库和一些标准的数据模型，提供了高效地操作大型数据集所需的工具。pandas提供了大量能使我们快速便捷地处理数据的函数和方法。你很快就会发现，它是使Python成为强大而高效的数据分析环境的重要因素之一。
-  '''
+import numpy as np
+'''
+NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库.
+Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与 SciPy（Scientific Python）和 Matplotlib（绘图库）一起使用.
+'''
+import pandas as pd
+''' pandas 是基于NumPy 的一种工具，该工具是为了解决数据分析任务而创建的。Pandas 纳入了大量库和一些标准的数据模型，
+提供了高效地操作大型数据集所需的工具。pandas提供了大量能使我们快速便捷地处理数据的函数和方法。
+你很快就会发现，它是使Python成为强大而高效的数据分析环境的重要因素之一。
+'''
 ```
 ## Step 2: Importing dataset(导入数据集)
 ```python
-  import sklearn
-  """Scikit-learn(sklearn)是机器学习中常用的第三方模块，对常用的机器学习方法进行了封装，包括回归(Regression)、降维(Dimensionality Reduction)、分类(Classfication)、聚类(Clustering)等方法。
-  """
-  dataset = pd.read_csv('../GitHub clone/100-Days-Of-ML-Code/datasets/Data.csv')
-  # 将自变量（3列）和因变量（1列）拆开，拆成一个矩阵和一个向量。
-  # 取除了最后一列的所有数据
-  X = dataset.iloc[ : , :-1].values
-  # 数组
-  # 索引右边第一个从零开始，左边第一个从-1开始，每次从右边开始读，读到左边显示数字的前一个
+import sklearn
+"""Scikit-learn(sklearn)是机器学习中常用的第三方模块，对常用的机器学习方法进行了封装，包括回归(Regression)、
+降维(Dimensionality Reduction)、分类(Classfication)、聚类(Clustering)等方法。
+"""
+dataset = pd.read_csv('../GitHub clone/100-Days-Of-ML-Code/datasets/Data.csv')
+# 将自变量（3列）和因变量（1列）拆开，拆成一个矩阵和一个向量。
+# 取除了最后一列的所有数据
+X = dataset.iloc[ : , :-1].values
+# 数组
+# 索引右边第一个从零开始，左边第一个从-1开始，每次从右边开始读，读到左边显示数字的前一个
 
-  # loc函数：通过行（列）索引 "Index" 中的具体值来取行数据（如取"Index"为"A"的行）根据DataFrame的具体标签选取列（行）
-  # iloc函数：通过行号来取行（列）数据（如取第二行数据）根据标签的所在位置，从0开始计数，选取列（行）
+# loc函数：通过行（列）索引 "Index" 中的具体值来取行数据（如取"Index"为"A"的行）根据DataFrame的具体标签选取列（行）
+# iloc函数：通过行号来取行（列）数据（如取第二行数据）根据标签的所在位置，从0开始计数，选取列（行）
 
-  # 取第三行的所有数据
-  Y = dataset.iloc[ : , 3].values
+# 取第三行的所有数据
+Y = dataset.iloc[ : , 3].values
 
-  print("Step 2: Importing dataset")
-  print("X")
-  print(X)
-  print("Y")
-  print(Y)
+print("Step 2: Importing dataset")
+print("X")
+print(X)
+print("Y")
+print(Y)
 ```
 ## Step 3: Handling the missing data(处理缺失数据)
 ```python
@@ -72,7 +75,8 @@ print(X)
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder_X = LabelEncoder()
 # LabelEncoder可以将标签分配一个0—n_classes-1之间的编码 将各种标签分配一个可数的连续编号：
-# fit_transform(trainData)  对部分数据先拟合fit，找到该part的整体指标，如均值、方差、最大值最小值等等（根据具体转换的目的），然后对该trainData进行转换transform，从而实现数据的标准化、归一化等等。
+# fit_transform(trainData)  对部分数据先拟合fit，找到该part的整体指标，如均值、方差、最大值最小值等等（根据具体转换的目的），
+然后对该trainData进行转换transform，从而实现数据的标准化、归一化等等。
 X[ : , 0] = labelencoder_X.fit_transform(X[ : , 0])
 # Creating a dummy variable(创建虚拟变量)
 onehotencoder = OneHotEncoder(categorical_features = [0])
@@ -101,7 +105,8 @@ train_data：被划分的样本特征集
 train_target：被划分的样本标签
 test_size：如果是浮点数，在0-1之间，表示样本占比；如果是整数的话就是样本的数量
 random_state：是随机数的种子。
-随机数种子：其实就是该组随机数的编号，在需要重复试验的时候，保证得到一组一样的随机数。比如你每次都填1，其他参数一样的情况下你得到的随机数组是一样的。但填0或不填，每次都会不一样。
+随机数种子：其实就是该组随机数的编号，在需要重复试验的时候，保证得到一组一样的随机数。
+比如你每次都填1，其他参数一样的情况下你得到的随机数组是一样的。但填0或不填，每次都会不一样。
 随机数的产生取决于种子，随机数和种子之间的关系遵从以下两个规则：
 种子不同，产生不同的随机数；种子相同，即使实例不同也产生相同的随机数。
 """
@@ -120,8 +125,10 @@ print(Y_test)
 ```python
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
-# 数据在前处理的时候，经常会涉及到数据标准化。将现有的数据通过某种关系，映射到某一空间内。常用的标准化方式是,减去平均值，然后通过标准差映射到均至为0的空间内。系统会记录每个输入参数的平均数和标准差，以便数据可以还原。
-# 很多ML的算法要求训练的输入参数的平均值是0并且有相同阶数的方差例如:RBF核的SVM，L1和L2正则的线性回归sklearn.preprocessing.StandardScaler能够轻松的实现上述功能。
+# 数据在前处理的时候，经常会涉及到数据标准化。将现有的数据通过某种关系，映射到某一空间内。
+常用的标准化方式是,减去平均值，然后通过标准差映射到均至为0的空间内。系统会记录每个输入参数的平均数和标准差，以便数据可以还原。
+# 很多ML的算法要求训练的输入参数的平均值是0并且有相同阶数的方差例如:RBF核的SVM，
+L1和L2正则的线性回归sklearn.preprocessing.StandardScaler能够轻松的实现上述功能。
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 print("---------------------")
