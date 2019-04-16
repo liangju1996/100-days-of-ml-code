@@ -12,7 +12,7 @@
 
 ## 2019.4.14
 ### 安装anaconda3
-安装成功，未出现问题，但...超级慢
+安装成功，未出现问题，但...超级慢  据说使用清华大学的镜像网站会快一点
 
 ## 2019.4.15
 ### 复习完善day 1 内容
@@ -27,8 +27,9 @@
 ## 2019.4.16
 ### 使用saver.restore()时一直出错
 * 解决方法：  
-将之前的
-```saver.restore(sess, './model.ckpt') ```
-改为
+将之前的  
+```saver.restore(sess, './model.ckpt') ```  
+改为  
 ```saver.save(sess, os.path.join(os.getcwd(), 'model.ckpt'))```
 ### 搭建tensorflow-gpu环境
+
