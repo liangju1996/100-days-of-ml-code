@@ -32,4 +32,5 @@
 改为  
 ```saver.save(sess, os.path.join(os.getcwd(), 'model.ckpt'))```
 ### 搭建tensorflow-gpu环境
+### 学习day2 一元线性回归
 
