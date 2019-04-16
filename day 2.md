@@ -45,7 +45,9 @@ Y_pred = regrssor.predict(X_test)
 
 ## step4: 可视化
 
-### ![训练集结果可视化](https://github.com/liangju1996/100-days-of-ml-code/blob/master/day2%20train.png)
+### 训练集结果可视化
+![训练集结果可视化](https://github.com/liangju1996/100-days-of-ml-code/blob/master/day2%20train.png)
+
 #### 散点图
 ```python
 plt.scatter(X_train, Y_train, color = 'red')
@@ -56,7 +58,9 @@ plt.plot(X_train, regrssor.predict(X_train), 'bo-')
 plt.show()
 ```
 
-### ![测试集结果可视化](https://github.com/liangju1996/100-days-of-ml-code/blob/master/day2%20test.png)
+### 测试集结果可视化
+![测试集结果可视化](https://github.com/liangju1996/100-days-of-ml-code/blob/master/day2%20test.png)
+
 #### 散点图
 ```python
 plt.scatter(X_test, Y_test, color = 'red')
