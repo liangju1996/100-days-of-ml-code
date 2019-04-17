@@ -1,4 +1,5 @@
 # day3 Multiple Linear Regression 多元线性回归
+[参考](https://blog.csdn.net/ssswill/article/details/86151933)
 当Y值的影响因素不唯一时，使用多元线性回归；反之，使用一元  
 [学习线性回归与逻辑回归](https://blog.csdn.net/m0_37622530/article/details/80949562)
 ## Step1: Data Preprocessing 数据预处理
