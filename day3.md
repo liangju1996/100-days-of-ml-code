@@ -1,6 +1,6 @@
 # day3 Multiple Linear Regression 多元线性回归
 当Y值的影响因素不唯一时，使用多元线性回归；反之，使用一元
-[学习线性回归与逻辑回归]（https://blog.csdn.net/m0_37622530/article/details/80949562）
+[学习线性回归与逻辑回归](https://blog.csdn.net/m0_37622530/article/details/80949562）
 ## Step1: Data Preprocessing 数据预处理
 ### Importing the libraries 导入库
 ```python
@@ -32,7 +32,7 @@ X = onehotencoder.fit_transform(X).toarray()
 # toarray()的作用：将矩阵变成二维数组？？？有一个方法实在不会时，可在代码中分别加上和取消这个方法看两者输出有什么差别
 ```
 ### Avoiding Dummy Variable Trap 躲避虚拟变量陷阱
-虚拟变量其实算不上一种变量类型（比如连续变量、分类变量等），确切地说，是一种将多分类变量转换为二分变量的一种形式。
+虚拟变量其实算不上一种变量类型（比如连续变量、分类变量等），确切地说，是一种将多分类变量转换为二分变量的一种形式.  
 比如预测体重w，输入的变量由身高h和性别、人种。其中性别（男or女，暂不考虑复杂情况0）、人种（黄or白or黑，暂不考虑混血等复杂情况）不是连续变量。此时的回归模型为：
 
 `w = a + b*h +c*is_man +d*is_yellow + e*is_white`
