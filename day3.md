@@ -29,7 +29,7 @@ X[ : , 3] = labelencoder.fit_transform(X[ : , 3])
 onehotencoder = OneHotEncoder(categorical_features = [3])  # 指定第四列（index为3）
 X = onehotencoder.fit_transform(X).toarray()
 
-# toarray()的作用：将矩阵变成二维数组？？这里不确定？
+# toarray()的作用：onehotencoder返回的是一个稀疏矩阵，存储方式跟array不一样，需要用toarray转一下
 ```
 ### Avoiding Dummy Variable Trap 躲避虚拟变量陷阱
 虚拟变量其实算不上一种变量类型（比如连续变量、分类变量等），确切地说，是一种将多分类变量转换为二分变量的一种形式.  
@@ -37,7 +37,9 @@ X = onehotencoder.fit_transform(X).toarray()
 
 `w = a + b*h +c*is_man +d*is_yellow + e*is_white`
 
-该模型为加法模型。其中is_man，is_yellow，is_white都只能取0或1（能取n个值的变量，在式子中由n-1项表示；比如人种一共三类，则式子中用is_yellow，is_white两个变量表示；否则会造成多重共线性）。
+该模型为加法模型。其中is_man，is_yellow，is_white都只能取0或1（能取n个值的变量，在式子中由n-1项表示；比如人种一共三类，则式子中用is_yellow，is_white两个变量表示；否则会造成多重共线性）。  
+存在所谓的虚拟变量陷阱。意思就是：其实state只有3种取值，理论上2位二进制就可以表示，而这里用100，010，001三种表示。其实若把第一位统一去掉，变为00，10，01也是可以区分的。所以这里需要做一个处理：
+躲避虚拟变量陷阱,把第零列去掉了
 
 ```python
 X = X[ : , 1: ]
