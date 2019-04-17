@@ -29,7 +29,7 @@ X[ : , 3] = labelencoder.fit_transform(X[ : , 3])
 onehotencoder = OneHotEncoder(categorical_features = [3])  # 指定第四列（index为3）
 X = onehotencoder.fit_transform(X).toarray()
 
-# toarray()的作用：将矩阵变成二维数组？？这里不确定？有一个方法实在不会时，可在代码中分别加上和取消这个方法看两者输出有什么差别
+# toarray()的作用：将矩阵变成二维数组？？这里不确定？
 ```
 ### Avoiding Dummy Variable Trap 躲避虚拟变量陷阱
 虚拟变量其实算不上一种变量类型（比如连续变量、分类变量等），确切地说，是一种将多分类变量转换为二分变量的一种形式.  
