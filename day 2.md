@@ -25,10 +25,10 @@ print('Y:',Y)
 ```
 ### 对数据进行训练集、测试集划分
 这里也可以用sklearn库的cross_validation类即：
-`from sklearn.cross_valiation import train_test_split`
+`from sklearn.cross_valiation import train_test_split`  
 model_selection 主要提供 交叉验证 和 结果评估 的工具  
 cross_validation 模块作为老版本中的模块, 拥有同样的方法, 在0.20.0版本中将会本移除, 因此尽量不要使用cross_validation 模块.  
-[sklearn: model_selection](https://blog.csdn.net/qq_39037910/article/details/73333206)
+[sklearn: model_selection的一些方法](https://blog.csdn.net/qq_39037910/article/details/73333206)
 ```python
 from sklearn.model_selection import train_test_split
 # 拆分数据，0.25作为测试集
