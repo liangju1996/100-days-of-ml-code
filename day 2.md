@@ -24,7 +24,7 @@ print('Y:',Y)
 # 注意此处特征虽然只有学习时间这一个（一元线性回归），但是X必须是2D的（如下），否则后面的regressor.fit函数会出错。
 ```
 ### 对数据进行训练集、测试集划分
-这里也可以用sklearn库的cross_validation类即：
+这里之前有人用sklearn库的cross_validation类即：
 `from sklearn.cross_valiation import train_test_split`  
 model_selection 主要提供 交叉验证 和 结果评估 的工具  
 cross_validation 模块作为老版本中的模块, 拥有同样的方法, 在0.20.0版本中将会本移除, 因此尽量不要使用cross_validation 模块.  
