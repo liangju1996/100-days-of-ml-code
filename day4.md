@@ -12,7 +12,7 @@
 * 然后使用阈值分类器将（0，1）范围的值转化成0和1的值来表示结果
 ### Sigmlid函数
 * Sigmoid函数是一个S形曲线，可以实现将任意真实值映射为阈值范围为0-1的值，但不局限于0-1  
- $$\logit(p)=ln(p/1-p)=a_0+a_1x_1+a_2x_2+...+a_nx_n$$
+ $$\logit(p)=ln({p}/{1-p})={a_0+a_1x_1+a_2x_2+...+a_nx_n}$$
 * 得到所需的Sigmoid函数后，接下来只需要和前面的线性回归一样，拟合出该式中n个参数即可。
 逻辑回归示例  
 ![逻辑回归示例](https://github.com/liangju1996/100-days-of-ml-code/blob/master/图片/day4.png)
