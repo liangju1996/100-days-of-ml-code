@@ -63,7 +63,7 @@ print(after)
 * [虚拟变量陷阱的消除](https://wenku.baidu.com/view/7265e32126284b73f242336c1eb91a37f11132f9)去掉任意一列（冗余项）-->消除之后依然可以表示n个状态.但是有一项为零，其他项都是1使得他们大小（欧式距离）不同了，这样依然可以（因为有个截距的问题，比如这去除第一个量之后的俩变量x1,x2，我们的线性回归模型是y=a*x1+b*x2+d，因为d的存在使得哪怕x1与x2都为0，预测值依然不会出问题）
 ## 2019.4.18
 ### 学习day4 逻辑回归
-### 遇到md公式编辑问题，尚未编辑成功
+### 遇到md公式编辑问题，尚未编辑成功,抽空再改
 [参考1](https://blog.csdn.net/lihaoweicsdn/article/details/83895143)  
 [参考2](https://blog.csdn.net/wireless_com/article/details/70596155)  
 
