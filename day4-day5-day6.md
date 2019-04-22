@@ -84,10 +84,10 @@ X_test = sc.transform(X_test)
 我们在二维空间中，我们两类用户（购买和不购买）将被一条直线分割。然后导入逻辑回归类。接下来
 我们将创建该类的对象，它将作为我们训练集的分类器。
 ### 将逻辑回归应用于训练集
-[sklearn.linear_model.LinearRegression官方手册](https://scikitlearn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
-[sklearn.linear_model]模型实现了广义线性模型，包括线性回归、Ridge回归、Bayesian回归等。  
+[sklearn.linear_model.LinearRegression官方手册](https://scikitlearn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
+sklearn.linear_model模型实现了广义线性模型，包括线性回归、Ridge回归、Bayesian回归等。  
 [sklearn.linear_model之LinearRegression](https://blog.csdn.net/jingyi130705008/article/details/78163955)  
-[sklearn.linear_model.LogisticRegression官方手册]（https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression）
+[sklearn.linear_model.LogisticRegression官方手册](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
 [(sklearn)逻辑回归linear_model.LogisticRegression用法](https://blog.csdn.net/mrxjh/article/details/78499801)
 ```python
 from sklearn.linear_model import LogisticRegression
