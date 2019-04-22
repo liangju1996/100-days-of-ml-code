@@ -84,11 +84,11 @@ X_test = sc.transform(X_test)
 我们在二维空间中，我们两类用户（购买和不购买）将被一条直线分割。然后导入逻辑回归类。接下来
 我们将创建该类的对象，它将作为我们训练集的分类器。
 ### 将逻辑回归应用于训练集
-[sklearn.linear_model.LinearRegression官方手册](https://scikitlearn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
-sklearn.linear_model模型实现了广义线性模型，包括线性回归、Ridge回归、Bayesian回归等。  
-[sklearn.linear_model之LinearRegression](https://blog.csdn.net/jingyi130705008/article/details/78163955)  
-[sklearn.linear_model.LogisticRegression官方手册](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
-[(sklearn)逻辑回归linear_model.LogisticRegression用法](https://blog.csdn.net/mrxjh/article/details/78499801)
+[sklearn.linear_model.LinearRegression官方手册](https://scikitlearn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)  
+sklearn.linear_model模型实现了广义线性模型，包括线性回归、Ridge回归、Bayesian回归等。    
+[sklearn.linear_model之LinearRegression](https://blog.csdn.net/jingyi130705008/article/details/78163955)    
+[sklearn.linear_model.LogisticRegression官方手册](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)  
+[(sklearn)逻辑回归linear_model.LogisticRegression用法](https://blog.csdn.net/mrxjh/article/details/78499801)  
 ```python
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression()
@@ -104,7 +104,7 @@ y_pred = classifier.predict(X_test)
 ## Step4 评估预测
 我们预测了测试集，现在我么将评估逻辑回归模型是否正确的学习和理解。因此这个混淆矩阵将包含我们模型的正确和错误的预测。
 ### 生成混淆矩阵
-[sklearn中的模型评估-构建评估函数 ](https://www.cnblogs.com/harvey888/p/6964741.html)
+[sklearn中的模型评估-构建评估函数 ](https://www.cnblogs.com/harvey888/p/6964741.html)  
 sklearn.metric提供了一些函数，用来计算真实值与预测值之间的预测误差：  
 以_score结尾的函数，返回一个最大值，越高越好  
 以_error结尾的函数，返回一个最小值，越小越好；  
@@ -116,14 +116,14 @@ cm = confusion_matrix(y_test, y_pred)
 ```
 
 ### 可视化
-# [matplotlib.colors(ListedColormap)](https://blog.csdn.net/zhaogeng111/article/details/78419015)
+[matplotlib.colors(ListedColormap)](https://blog.csdn.net/zhaogeng111/article/details/78419015)  
+[numpy.meshgrid():生成网格点坐标矩阵](https://blog.csdn.net/lllxxq141592654/article/details/81532855)
+
 ```python
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_train,y_train
 X1, X2 = np.meshgrid(np.arange(start = X_set[:,0].min()-1, stop = X_set[:, 0].max()+1, step = 0.01),
                     np.arange(start = X_set[:,1].min()-1, stop = X_set[:, 1].max()+1, setp = 0.01))
-
-# [numpy.meshgrid():生成网格点坐标矩阵](https://blog.csdn.net/lllxxq141592654/article/details/81532855)。
 
 '''返回值： np.arange()函数返回一个有终点和起点的固定步长的排列，如[1,2,3,4,5]，起点是1，终点是5，步长为1。 
 参数个数情况： np.arange()函数分为一个参数，两个参数，三个参数三种情况 
