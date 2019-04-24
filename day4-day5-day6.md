@@ -1,6 +1,7 @@
 # day4 Logistic Regression 逻辑回归
 [逻辑回归详解](https://blog.csdn.net/liulina603/article/details/78676723)
 ### 逻辑回归是什么
+* 一个被Sigmoid函数归一化之后的线性回归模型
 * 被用来处理不同的分类问题(变量为分类变量(eg.患病，未患病...))
 * 目的是预测当前被观察的对象属于哪个组
 * 提供一个离散的二进制的输出结果
