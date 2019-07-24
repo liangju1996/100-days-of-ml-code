@@ -1,0 +1,3 @@
+# Tensorboard
+TensorBoard是一个方便的应用程序，允许您在浏览器中查看模型或模型的各个方面。
+我们将TensorBoard与Keras一起使用的方式是通过Keras回调。实际上有很多Keras回调，你可以自己制作。
