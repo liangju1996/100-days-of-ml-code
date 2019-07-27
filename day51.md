@@ -29,7 +29,7 @@ In[7]: %timeit df1 + df2 + df3 + df4
 10 loops, best of 3: 87.1 ms per loop
 ```
 也可以通过 pd.eval 和字符串代数式计算并得出相同的结果：
-```python```python
+```python
 In[8]: %timeit pd.eval('df1 + df2 + df3 + df4')
 10 loops, best of 3: 42.2 ms per loop
 ```
@@ -344,22 +344,4 @@ In[6]: plt.contourf(X, Y, Z, 20, cmap='RdGy')
 而不是绝大多数等高线图中使用的左下角。这一点在显示网格数据图形的时候必须调整。
 • plt.imshow() 会 自 动 调 整 坐 标 轴 的 精 度 以 适 应 数 据 显 示。 你 可 以 通 过 plt.
 axis(aspect='image') 来设置 x 轴与 y 轴的单位。
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
